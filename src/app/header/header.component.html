@@ -76,7 +76,7 @@
 <mat-tab label="Business">
       <h3>BUSINESS NEWS</h3>
       <mat-divider></mat-divider>
-      <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of business"> 
+      <mat-card-subtitle *ngFor="let news of business"> 
         <a href="{{news.url}}" target="_blank">
           <mat-card-content>
               <li class="list-group-item mylist">
@@ -95,7 +95,7 @@
   <mat-tab label="Technology">  
     <h3>TECHNOLOGY NEWS</h3>
     <mat-divider></mat-divider>
-    <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of technology"> 
+    <mat-card-subtitle *ngFor="let news of technology"> 
       <a href="{{news.url}}" target="_blank">
         <mat-card-content>
             <li class="list-group-item mylist">
@@ -114,7 +114,7 @@
   <mat-tab label="Entertainment">  
     <h3>ENTERTAINMENT NEWS</h3>
     <mat-divider></mat-divider>
-    <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of entertainment"> 
+    <mat-card-subtitle *ngFor="let news of entertainment"> 
       <a href="{{news.url}}" target="_blank">
         <mat-card-content>
             <li class="list-group-item mylist">
@@ -133,7 +133,7 @@
   <mat-tab label="States">
   <h3>NEWS FROM STATES</h3>
     <mat-divider></mat-divider>
-    <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of states"> 
+    <mat-card-subtitle *ngFor="let news of states"> 
       <a href="{{news.url}}" target="_blank">
         <mat-card-content>
             <li class="list-group-item mylist">
@@ -152,7 +152,7 @@
   <mat-tab label="Cities"> 
     <h3>NEWS FROM CITIES</h3>
     <mat-divider></mat-divider>
-    <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of cities"> 
+    <mat-card-subtitle *ngFor="let news of cities"> 
       <a href="{{news.url}}" target="_blank">
         <mat-card-content>
             <li class="list-group-item mylist">
@@ -171,7 +171,7 @@
   <mat-tab label="Editorials & Opinions"> 
       <h3>EDITORIALS & OPINIONS</h3>
       <mat-divider></mat-divider>
-      <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of editorials"> 
+      <mat-card-subtitle *ngFor="let news of editorials"> 
         <a href="{{news.url}}" target="_blank">
           <mat-card-content>
               <li class="list-group-item mylist">
@@ -190,7 +190,7 @@
   <mat-tab label="Education"> 
       <h3>EDUCATION NEWS</h3>
       <mat-divider></mat-divider>
-      <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of latest"> 
+      <mat-card-subtitle *ngFor="let news of latest"> 
         <a href="{{news.url}}" target="_blank">
           <mat-card-content>
               <li class="list-group-item mylist">
