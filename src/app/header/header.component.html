@@ -1,0 +1,210 @@
+ <mat-toolbar color="primary">
+  <span>NewsWidget</span>
+  <span class="spacer"></span>
+  <input type="text" [(ngModel)]="search" name="search" class="form-control" placeholder="search news by word">
+  <button type="submit" class="btn btn-primary btn-block" (click)="loadSearch()">
+    <h4>Search</h4>
+  </button>
+
+</mat-toolbar>
+
+<mat-tab-group>
+  <mat-tab label="Latest"> 
+    <mat-card>
+        <h3>LATEST NEWS</h3>
+        <mat-divider></mat-divider>
+        <mat-card-subtitle *ngFor="let news of latest1"> 
+          <a href="{{news.url}}" target="_blank">
+            <mat-card-content>
+                <li class="list-group-item mylist">
+
+                <h4 class="text-center">{{news.title}}</h4>
+                <div class="image">
+                    <img class="img-responsive" src="{{news.urlToImage}}" />
+                </div>
+                <br>
+                <p>{{news.description}}</p>
+            </mat-card-content>>
+        </a>
+      </mat-card-subtitle>
+    </mat-card>
+</mat-tab>
+
+<mat-tab label="India">
+      <h3>NEWS FROM INDIA</h3>
+      <mat-divider></mat-divider>
+      <mat-card-subtitle *ngFor="let news of India"> 
+          <a href="{{news.url}}" target="_blank">
+
+          <mat-card-content>
+              <li class="list-group-item mylist">
+
+              <h4 class="text-center">{{news.title}}</h4>
+              <div class="image">
+                  <img class="img-responsive" src="{{news.urlToImage}}" />
+              </div>
+
+              <span>{{news.author}}</span>
+              <br>
+              <p>{{news.description}}</p>
+          </mat-card-content>>
+    </a>
+    </mat-card-subtitle> </mat-tab>
+
+<mat-tab label="World"> 
+      <h3>WORLD NEWS</h3>
+      <mat-divider></mat-divider>
+      <mat-card-subtitle *ngFor="let news of world"> 
+        <a href="{{news.url}}" target="_blank">
+          <mat-card-content>
+              <li class="list-group-item mylist">
+
+              <h4 class="text-center">{{news.title}}</h4>
+              <div class="image">
+                  <img class="img-responsive" src="{{news.urlToImage}}" />
+              </div>
+
+              <span class="badge">{{news.author}}</span>
+              <br>
+              <p>{{news.description}}</p>
+          </mat-card-content>>
+      </a>
+    </mat-card-subtitle>
+</mat-tab>
+
+
+<mat-tab label="Business">
+      <h3>BUSINESS NEWS</h3>
+      <mat-divider></mat-divider>
+      <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of business"> 
+        <a href="{{news.url}}" target="_blank">
+          <mat-card-content>
+              <li class="list-group-item mylist">
+
+              <h4 class="text-center">{{news.title}}</h4>
+              <div class="image">
+                  <img class="img-responsive" src="{{news.urlToImage}}" />
+              </div>
+
+              <span class="badge">{{news.author}}</span>
+              <br>
+              <p>{{news.description}}</p>
+          </mat-card-content>>
+      </a>
+    </mat-card-subtitle> </mat-tab>
+  <mat-tab label="Technology">  
+    <h3>TECHNOLOGY NEWS</h3>
+    <mat-divider></mat-divider>
+    <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of technology"> 
+      <a href="{{news.url}}" target="_blank">
+        <mat-card-content>
+            <li class="list-group-item mylist">
+
+            <h4 class="text-center">{{news.title}}</h4>
+            <div class="image">
+                <img class="img-responsive" src="{{news.urlToImage}}" />
+            </div>
+
+            <span class="badge">{{news.author}}</span>
+            <br>
+            <p>{{news.description}}</p>
+        </mat-card-content>>
+    </a>
+  </mat-card-subtitle> </mat-tab>
+  <mat-tab label="Entertainment">  
+    <h3>ENTERTAINMENT NEWS</h3>
+    <mat-divider></mat-divider>
+    <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of entertainment"> 
+      <a href="{{news.url}}" target="_blank">
+        <mat-card-content>
+            <li class="list-group-item mylist">
+
+            <h4 class="text-center">{{news.title}}</h4>
+            <div class="image">
+                <img class="img-responsive" src="{{news.urlToImage}}" />
+            </div>
+
+            <span class="badge">{{news.author}}</span>
+            <br>
+            <p>{{news.description}}</p>
+        </mat-card-content>>
+    </a>
+  </mat-card-subtitle> </mat-tab>
+  <mat-tab label="States">
+  <h3>NEWS FROM STATES</h3>
+    <mat-divider></mat-divider>
+    <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of states"> 
+      <a href="{{news.url}}" target="_blank">
+        <mat-card-content>
+            <li class="list-group-item mylist">
+
+            <h4 class="text-center">{{news.title}}</h4>
+            <div class="image">
+                <img class="img-responsive" src="{{news.urlToImage}}" />
+            </div>
+
+            <span class="badge">{{news.author}}</span>
+            <br>
+            <p>{{news.description}}</p>
+        </mat-card-content>>
+    </a>
+  </mat-card-subtitle> </mat-tab>
+  <mat-tab label="Cities"> 
+    <h3>NEWS FROM CITIES</h3>
+    <mat-divider></mat-divider>
+    <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of cities"> 
+      <a href="{{news.url}}" target="_blank">
+        <mat-card-content>
+            <li class="list-group-item mylist">
+
+            <h4 class="text-center">{{news.title}}</h4>
+            <div class="image">
+                <img class="img-responsive" src="{{news.urlToImage}}" />
+            </div>
+
+            <span class="badge">{{news.author}}</span>
+            <br>
+            <p>{{news.description}}</p>
+        </mat-card-content>>
+    </a>
+  </mat-card-subtitle> </mat-tab>
+  <mat-tab label="Editorials & Opinions"> 
+      <h3>EDITORIALS & OPINIONS</h3>
+      <mat-divider></mat-divider>
+      <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of editorials"> 
+        <a href="{{news.url}}" target="_blank">
+          <mat-card-content>
+              <li class="list-group-item mylist">
+
+              <h4 class="text-center">{{news.title}}</h4>
+              <div class="image">
+                  <img class="img-responsive" src="{{news.urlToImage}}" />
+              </div>
+
+              <span class="badge">{{news.author}}</span>
+              <br>
+              <p>{{news.description}}</p>
+          </mat-card-content>>
+      </a>
+    </mat-card-subtitle> </mat-tab>
+  <mat-tab label="Education"> 
+      <h3>EDUCATION NEWS</h3>
+      <mat-divider></mat-divider>
+      <mat-card-subtitle class="col-ms-6 col-md-3 feed" *ngFor="let news of latest"> 
+        <a href="{{news.url}}" target="_blank">
+          <mat-card-content>
+              <li class="list-group-item mylist">
+
+              <h4 class="text-center">{{news.title}}</h4>
+              <div class="image">
+                  <img class="img-responsive" src="{{news.urlToImage}}" />
+              </div>
+
+              <span class="badge">{{news.author}}</span>
+              <br>
+              <p>{{news.description}}</p>
+          </mat-card-content>>
+      </a>
+    </mat-card-subtitle>
+  </mat-tab>
+</mat-tab-group>
